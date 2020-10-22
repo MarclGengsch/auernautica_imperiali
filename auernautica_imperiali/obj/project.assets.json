@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HTL Krems\\Sew Projekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+      "projectUniqueName": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
       "projectName": "auernautica_imperiali",
-      "projectPath": "D:\\HTL Krems\\Sew Projekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+      "projectPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\HTL Krems\\Sew Projekt\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
+      "outputPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

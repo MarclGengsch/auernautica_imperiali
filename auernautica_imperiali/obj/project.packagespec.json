@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\HTL Krems\\Sew Projekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+    "projectUniqueName": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
     "projectName": "auernautica_imperiali",
-    "projectPath": "D:\\HTL Krems\\Sew Projekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
-    "outputPath": "D:\\HTL Krems\\Sew Projekt\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
+    "projectPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+    "outputPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"

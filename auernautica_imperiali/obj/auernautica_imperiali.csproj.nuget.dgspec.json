@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {}
+    "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {}
   },
   "projects": {
-    "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
+    "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+        "projectUniqueName": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
         "projectName": "auernautica_imperiali",
-        "projectPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
-        "packagesPath": "C:\\Users\\magen\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
+        "projectPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\magen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
