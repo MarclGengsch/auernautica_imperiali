@@ -6,6 +6,7 @@ namespace auernautica_imperiali {
             Console.WriteLine("tobi is toll"); //wallah was los hi
             Console.WriteLine("tobi is toll");
             Console.WriteLine("Gabsl auch");
+            Console.WriteLine("Gabsl auch");
         }
     }
 }
