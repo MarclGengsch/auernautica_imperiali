@@ -3,7 +3,9 @@
 namespace auernautica_imperiali {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("tobi is toll"); //hallokjöhbikkkjhhjkrth
+            Console.WriteLine("tobi is toll"); //wallah was los
+            Console.WriteLine("tobi is toll");
+            Console.WriteLine("Gabsl auch");
         }
     }
 }
