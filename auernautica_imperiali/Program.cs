@@ -7,6 +7,11 @@ namespace auernautica_imperiali {
             Console.WriteLine("tobi is toll");
             Console.WriteLine("Gabsl auch");
             Console.WriteLine("Gabsl auch");
+            Console.WriteLine("Gabsl auch");
+            Console.WriteLine("Gabsl auch");
+            Console.WriteLine("Gabsl auch");
+            Console.WriteLine("Gabsl auch");
+            Console.WriteLine("Gabsl auch");
         }
     }
 }
