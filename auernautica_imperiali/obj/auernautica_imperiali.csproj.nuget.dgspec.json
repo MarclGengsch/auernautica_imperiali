@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {}
+    "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {}
   },
   "projects": {
-    "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
+    "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+        "projectUniqueName": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
         "projectName": "auernautica_imperiali",
-        "projectPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\HTL Krems\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
+        "projectPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj",
+        "packagesPath": "C:\\Users\\Tobias\\.nuget\\packages\\",
+        "outputPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tobias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -9,5 +9,6 @@
         private int _handling;
         private int _altitude;
         private int _maxAltitude;
+        //test
     }
 }
