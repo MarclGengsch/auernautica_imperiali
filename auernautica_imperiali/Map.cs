@@ -7,9 +7,9 @@ namespace auernautica_imperiali {
         }
 
         public void PrintMap() {
-            for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 15; j++) {
-                    for (int k = 0; k < 15; k++) {
+            for (int i = 1; i <= 5; i++) {
+                for (int j = 1; j <= 15; j++) {
+                    for (int k = 1; k <= 15; k++) {
                         bool written = false;
                         foreach (var _orks in AUnit.OrkList) {
                             if (_orks.Point.Equals(new Point(j,k,i))) {
@@ -27,8 +27,14 @@ namespace auernautica_imperiali {
                             Console.Write("_");
                         }
                     }
+
+                    Console.WriteLine();
                 }
+
+                Console.WriteLine();
             }
         }
+        
+        
     }
 }

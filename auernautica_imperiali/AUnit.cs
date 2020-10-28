@@ -11,6 +11,7 @@ namespace auernautica_imperiali {
         private int _handling;
         private int _maxAltitude;
         private int _team;
+        private int _cost;
         private Point _point;
         private static List<AOrk> _orkList = new List<AOrk>();
         private static List<AImperiali> _imperialiList = new List<AImperiali>();
@@ -32,7 +33,7 @@ namespace auernautica_imperiali {
 
 
         protected AUnit(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
-            int maneuver, int handling, int maxAltitude, int team) {
+            int maneuver, int handling, int maxAltitude, int team, int cost) {
             _structure = structure;
             _speed = speed;
             _throttle = throttle;
@@ -43,6 +44,7 @@ namespace auernautica_imperiali {
             _maxAltitude = maxAltitude;
             _team = team;
             _point = xyz;
+            _cost = cost;
         }
     }
 }
