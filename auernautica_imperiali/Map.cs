@@ -21,6 +21,7 @@ namespace auernautica_imperiali {
                             if (_imperiali.Point.Equals(new Point(j,k,i))) {
                                 Console.Write("i");
                                 written = true;
+                                
                             } 
                         }
                         if (!written) {
