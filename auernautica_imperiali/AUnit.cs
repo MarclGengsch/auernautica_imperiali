@@ -11,6 +11,7 @@ namespace auernautica_imperiali {
         private int _handling;
         private int _maxAltitude;
         private int _team;
+        private Point _point;
         private static List<AOrk> _orkList = new List<AOrk>();
         private static List<AImperiali> _imperialiList = new List<AImperiali>();
 
@@ -36,6 +37,7 @@ namespace auernautica_imperiali {
             _handling = handling;
             _maxAltitude = maxAltitude;
             _team = team;
+            _point = xyz;
         }
     }
 }
