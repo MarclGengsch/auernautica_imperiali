@@ -25,8 +25,8 @@ namespace auernautica_imperiali {
         }
 
 
-        protected AUnit(int x, int y, int z, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
-            int maneuver, int handling, int maxAltitude, int team) : base(x, y, z) {
+        protected AUnit(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
+            int maneuver, int handling, int maxAltitude, int team) : base(xyz.X, xyz.Y, xyz.Z) {
             _structure = structure;
             _speed = speed;
             _throttle = throttle;
