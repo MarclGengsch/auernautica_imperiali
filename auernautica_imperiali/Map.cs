@@ -1,9 +1,8 @@
 ﻿using System;
 
 namespace auernautica_imperiali {
-    public class Map : Point {
-        
-        public Map() : base(15, 15, 5) {
+    public class Map {
+        public Map() {
         }
 
         public void PrintMap() {
