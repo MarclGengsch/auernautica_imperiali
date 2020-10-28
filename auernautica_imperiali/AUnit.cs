@@ -25,6 +25,12 @@ namespace auernautica_imperiali {
             set => _imperialiList = value;
         }
 
+        public Point Point
+        {
+            get => _point;
+            set => _point = value;
+        }
+
 
         protected AUnit(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
             int maneuver, int handling, int maxAltitude, int team) {
