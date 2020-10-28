@@ -11,7 +11,7 @@ namespace auernautica_imperiali {
                 for (int j = 0; j < 15; j++) {
                     for (int k = 0; k < 15; k++) {
                         foreach (var _orks in AUnit.OrkList) {
-                            if () {
+                            if (_orks.) {
                                 
                             }
                         }

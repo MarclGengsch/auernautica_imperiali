@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace auernautica_imperiali {
-    public abstract class AUnit : Point {
+    public abstract class AUnit {
         private int _structure;
         private int _speed;
         private int _throttle;
@@ -26,7 +26,7 @@ namespace auernautica_imperiali {
 
 
         protected AUnit(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
-            int maneuver, int handling, int maxAltitude, int team) : base(xyz.X, xyz.Y, xyz.Z) {
+            int maneuver, int handling, int maxAltitude, int team) {
             _structure = structure;
             _speed = speed;
             _throttle = throttle;
