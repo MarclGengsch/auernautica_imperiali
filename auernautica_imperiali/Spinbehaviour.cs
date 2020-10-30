@@ -1,5 +1,5 @@
 ﻿namespace auernautica_imperiali {
-    public class Spinbehavour : IMoveBehaviour {
+    public class Spinbehaviour : IMoveBehaviour {
         
     }
 }

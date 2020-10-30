@@ -35,6 +35,6 @@ namespace auernautica_imperiali {
             }
         }
         
-        
+        //public PlaceAirCraft()
     }
 }

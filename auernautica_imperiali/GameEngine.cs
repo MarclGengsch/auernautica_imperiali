@@ -1,5 +1,5 @@
 ﻿namespace auernautica_imperiali {
-    public class GameEngine : ICommand {
+    public class GameEngine {
         
     }
 }

@@ -13,8 +13,8 @@ namespace auernautica_imperiali {
         private int _team;
         private int _cost;
         private Point _point;
-        private static List<AOrk> _orkList = new List<AOrk>();
-        private static List<AImperiali> _imperialiList = new List<AImperiali>();
+        private static List<AOrk> _orkList = new List<AOrk>();        //GameEngine
+        private static List<AImperiali> _imperialiList = new List<AImperiali>();    //GameEngine
 
         public static List<AOrk> OrkList {
             get => _orkList;

@@ -2,6 +2,6 @@
 
 namespace auernautica_imperiali {
     public enum EFireArc {
-        FRONT, RIGHT, REAR, LEFT, UP
+        FRONT, RIGHT, REAR, LEFT
     }
 }
