@@ -13,19 +13,19 @@ namespace auernautica_imperiali {
                     for (int k = 1; k <= Width; k++) {
                         bool written = false;
                         foreach (var _orks in GameEngine.OrkList) {
-                            if (_orks.Point.Equals(new Point(j,k,i))) {
-                                Console.Write("o");
+                            if (_orks.Point.Equals(new Point(k,j,i))) {
+                                Console.Write("o ");
                                 written = true;
                             }
                         }
                         foreach (var _imperiali in GameEngine.ImperialiList) {
-                            if (_imperiali.Point.Equals(new Point(j,k,i))) {
-                                Console.Write("i");
+                            if (_imperiali.Point.Equals(new Point(k,j,i))) {
+                                Console.Write("i ");
                                 written = true;
                             } 
                         }
                         if (!written) {
-                            Console.Write("_");
+                            Console.Write("_ ");
                         }
                     }
 

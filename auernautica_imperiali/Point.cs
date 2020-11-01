@@ -57,13 +57,13 @@ namespace auernautica_imperiali {
         {
             foreach (var _orks in GameEngine.OrkList)
             {
-                if (_orks.Point.Equals(new Point(X, Y, Z)))
+                if (_orks.Point.Equals(this))
                 {
                     return false;
                 }
             }
             foreach (var _imperiali in GameEngine.ImperialiList) {
-                if (_imperiali.Point.Equals(new Point(X, Y, Z)))
+                if (_imperiali.Point.Equals(this))
                 {
                     return false;
                 } 

@@ -12,7 +12,6 @@ namespace auernautica_imperiali {
 
         public void MakeAircraft(int x, int y, int z, EAirCraftType type)
         {
-            //islegal, JoinOrk
             AUnit unit;
             switch (type)
             {
@@ -37,7 +36,8 @@ namespace auernautica_imperiali {
                 default:
                     throw new ArgumentException();
             }
-            unit.JoinArmy();
+            if(!unit.JoinArmy())
+                Console.WriteLine("Error");
         }
         
     }

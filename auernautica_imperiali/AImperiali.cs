@@ -1,4 +1,6 @@
-﻿namespace auernautica_imperiali {
+﻿using System;
+
+namespace auernautica_imperiali {
     public class AImperiali : AUnit {
         public AImperiali(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed, int maneuver,
             int handling, int maxAltitude, int cost) : base(xyz, structure, speed, throttle, minSpeed, maxSpeed, maneuver,
@@ -7,7 +9,7 @@
 
         public override bool JoinArmy()
         {
-            if (!this.Point.IsPointLegal() || !IsStartField(Point) || !IsPurchaseLegal())
+            if (!this.Point.IsPointLegal() || !IsStartField(Point) || !IsPurchaseLegal() || !IsAltitudeLegal())
             {
                 return false;
             }
@@ -20,15 +22,17 @@
         {
             if (Point.Y == 0 || Point.Y == 1 || Point.Y == 2)
                 return true;
-
             return false;
         }
 
         private bool IsPurchaseLegal()
         {
-            if (Cost > Player.getImperiali().Coins)
-                return false;
-            return true;
+            return Cost <= Player.getImperiali().Coins;
+        }
+
+        private bool IsAltitudeLegal()
+        {
+            return MaxAltitude <= Point.Z;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace auernautica_imperiali {
 
         public override bool JoinArmy()
         {
-            if (!this.Point.IsPointLegal() || !IsStartField(Point) || !IsPurchaseLegal())
+            if (!this.Point.IsPointLegal() || !IsStartField(Point) || !IsPurchaseLegal() || !IsAltitudeLegal())
             {
                 return false;
             }
@@ -28,9 +28,12 @@ namespace auernautica_imperiali {
         
         private bool IsPurchaseLegal()
         {
-            if (Cost > Player.getOrk().Coins)
-                return false;
-            return true;
+            return Cost <= Player.getOrk().Coins;
+        }
+        
+        private bool IsAltitudeLegal()
+        {
+            return MaxAltitude <= Point.Z;
         }
     }
 }
