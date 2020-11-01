@@ -48,7 +48,7 @@ namespace auernautica_imperiali {
 
         public bool IsPointLegal()
         {
-            if (Z > Map.MaxAltitude || X >= Map.Width || Y >= Map.Height || !IsPointFree()) //unsure
+            if (Z > Map.Altitude || X >= Map.Width || Y >= Map.Height || !IsPointFree()) //unsure
                 return false;
             return true;
         }

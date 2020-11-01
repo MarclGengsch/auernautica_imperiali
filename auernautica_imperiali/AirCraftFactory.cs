@@ -38,6 +38,10 @@ namespace auernautica_imperiali {
             }
             if(!unit.JoinArmy())
                 Console.WriteLine("Error");
+            else
+            {
+                Console.WriteLine("Success");
+            }
         }
         
     }

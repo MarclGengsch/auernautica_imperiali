@@ -14,7 +14,7 @@ namespace auernautica_imperiali {
                 return false;
             }
             GameEngine.OrkList.Add(this);
-            Player.getOrk().Coins =- Cost;
+            Player.getOrk().Coins -= Cost;
             return true;
         }
         
@@ -33,7 +33,7 @@ namespace auernautica_imperiali {
         
         private bool IsAltitudeLegal()
         {
-            return MaxAltitude <= Point.Z;
+            return MaxAltitude >= Point.Z;
         }
     }
 }
