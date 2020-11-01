@@ -12,6 +12,13 @@ namespace auernautica_imperiali {
         private int _maxAltitude;
         private int _team;
         private int _cost;
+
+        public int Cost
+        {
+            get => _cost;
+            set => _cost = value;
+        }
+
         private Point _point;
 
         public Point Point {

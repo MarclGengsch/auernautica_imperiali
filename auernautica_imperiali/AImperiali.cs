@@ -4,5 +4,31 @@
             int handling, int maxAltitude, int cost) : base(xyz, structure, speed, throttle, minSpeed, maxSpeed, maneuver,
             handling, maxAltitude, 2, cost) {
         }
+
+        public override bool JoinArmy()
+        {
+            if (!this.Point.IsPointLegal() || !IsStartField(Point) || !IsPurchaseLegal())
+            {
+                return false;
+            }
+            GameEngine.ImperialiList.Add(this);
+            Player.getImperiali().Coins =- Cost;
+            return true;
+        }
+
+        private bool IsStartField(Point p)
+        {
+            if (Point.Y == 0 || Point.Y == 1 || Point.Y == 2)
+                return true;
+
+            return false;
+        }
+
+        private bool IsPurchaseLegal()
+        {
+            if (Cost > Player.getImperiali().Coins)
+                return false;
+            return true;
+        }
     }
 }

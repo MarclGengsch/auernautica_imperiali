@@ -11,3 +11,14 @@ D:\OneDrive - HTL Krems\HTL Krems\SEW\auernautica_imperiali\auernautica_imperial
 D:\OneDrive - HTL Krems\HTL Krems\SEW\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.dll
 D:\OneDrive - HTL Krems\HTL Krems\SEW\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.pdb
 D:\OneDrive - HTL Krems\HTL Krems\SEW\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.genruntimeconfig.cache
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.csprojAssemblyReference.cache
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.AssemblyInfoInputs.cache
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.AssemblyInfo.cs
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.dll
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\obj\Debug\netcoreapp3.1\auernautica_imperiali.pdb
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\bin\Debug\netcoreapp3.1\auernautica_imperiali.exe
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\bin\Debug\netcoreapp3.1\auernautica_imperiali.deps.json
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\bin\Debug\netcoreapp3.1\auernautica_imperiali.runtimeconfig.json
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\bin\Debug\netcoreapp3.1\auernautica_imperiali.runtimeconfig.dev.json
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\bin\Debug\netcoreapp3.1\auernautica_imperiali.dll
+D:\SewProjekt\auernautica_imperiali\auernautica_imperiali\bin\Debug\netcoreapp3.1\auernautica_imperiali.pdb
