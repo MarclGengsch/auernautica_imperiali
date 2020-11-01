@@ -45,5 +45,30 @@ namespace auernautica_imperiali {
         public override string ToString() {
             return $"{nameof(X)}: {X}, {nameof(Y)}: {Y}, {nameof(Z)}: {Z}";
         }
+
+        public bool IsPointLegal(Point p)
+        {
+            if (p.Z > Map.MaxAltitude || p.X >= Map.Width || p.Y >= Map.Height || !IsPointFree(p)) //unsure
+                return false;
+            return true;
+        }
+
+        public bool IsPointFree(Point p)
+        {
+            foreach (var _orks in GameEngine.OrkList)
+            {
+                if (_orks.Point.Equals(new Point(p.X, p.Y, p.Z)))
+                {
+                    return false;
+                }
+            }
+            foreach (var _imperiali in GameEngine.ImperialiList) {
+                if (_imperiali.Point.Equals(new Point(p.X,p.Y,p.Z)))
+                {
+                    return false;
+                } 
+            }
+            return true;
+        } 
     }
 }
