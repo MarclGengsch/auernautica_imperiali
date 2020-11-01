@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Threading;
 
 namespace auernautica_imperiali {
@@ -7,33 +8,37 @@ namespace auernautica_imperiali {
         public Map() {
         }
 
-        public void PrintMap() {
-            for (int i = 1; i <= Altitude; i++) {
-                for (int j = 1; j <= Height; j++) {
-                    for (int k = 1; k <= Width; k++) {
+        public void PrintMap()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i <= Height; i++)
+            {
+                for (int j = 1; j <= Altitude; j++)
+                {
+                    for (int k = 1; k <= Width; k++)
+                    {
                         bool written = false;
                         foreach (var _orks in GameEngine.OrkList) {
-                            if (_orks.Point.Equals(new Point(k,j,i))) {
-                                Console.Write("o ");
+                            if (_orks.Point.Equals(new Point(k,i,j))) {
+                                sb.Append("o ");
                                 written = true;
                             }
                         }
                         foreach (var _imperiali in GameEngine.ImperialiList) {
-                            if (_imperiali.Point.Equals(new Point(k,j,i))) {
-                                Console.Write("i ");
+                            if (_imperiali.Point.Equals(new Point(k,i,j))) {
+                                sb.Append("i ");
                                 written = true;
                             } 
                         }
                         if (!written) {
-                            Console.Write("_ ");
+                            sb.Append("_ ");
                         }
                     }
-
-                    Console.WriteLine();
+                    sb.Append("  ");
                 }
-
-                Console.WriteLine();
+                sb.AppendLine();
             }
+            Console.WriteLine(sb.ToString());
         }
         
         //public PlaceAirCraft()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace auernautica_imperiali {
     class Program {
@@ -10,6 +11,16 @@ namespace auernautica_imperiali {
             AirCraftFactory.GetInstance().MakeAircraft(7,14,5, EAirCraftType.BIGBURNA);
             
             GameEngine.GetInstance().map.PrintMap();
+            
+            /*Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic["hallo"] = "hallo";
+            dic["hi"] = "hallo";
+            dic["hola"] = "hallo";
+
+            foreach (var VARIABLE in dic.Keys)
+            {
+                Console.WriteLine(VARIABLE);
+            }*/
         }
     }
 }
