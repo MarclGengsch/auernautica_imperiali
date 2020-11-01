@@ -13,18 +13,6 @@ namespace auernautica_imperiali {
         private int _team;
         private int _cost;
         private Point _point;
-        private static List<AOrk> _orkList = new List<AOrk>();        //GameEngine
-        private static List<AImperiali> _imperialiList = new List<AImperiali>();    //GameEngine
-
-        public static List<AOrk> OrkList {
-            get => _orkList;
-            set => _orkList = value;
-        }
-
-        public static List<AImperiali> ImperialiList {
-            get => _imperialiList;
-            set => _imperialiList = value;
-        }
 
         public Point Point {
             get { return _point; }
@@ -46,5 +34,7 @@ namespace auernautica_imperiali {
             _point = xyz;
             _cost = cost;
         }
+
+        public abstract bool JoinArmy();
     }
 }

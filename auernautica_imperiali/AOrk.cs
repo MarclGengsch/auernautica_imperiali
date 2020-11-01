@@ -4,5 +4,10 @@
             int maneuver, int handling, int maxAltitude, int cost) : base(xyz, structure, speed, throttle, minSpeed, maxSpeed,
             maneuver, handling, maxAltitude, 1, cost) {
         }
+
+        public override bool JoinArmy()
+        {
+            
+        }
     }
 }

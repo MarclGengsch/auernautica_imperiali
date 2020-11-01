@@ -11,13 +11,13 @@ namespace auernautica_imperiali {
                 for (int j = 1; j <= 15; j++) {
                     for (int k = 1; k <= 15; k++) {
                         bool written = false;
-                        foreach (var _orks in AUnit.OrkList) {
+                        foreach (var _orks in GameEngine.OrkList) {
                             if (_orks.Point.Equals(new Point(j,k,i))) {
                                 Console.Write("o");
                                 written = true;
                             }
                         }
-                        foreach (var _imperiali in AUnit.ImperialiList) {
+                        foreach (var _imperiali in GameEngine.ImperialiList) {
                             if (_imperiali.Point.Equals(new Point(j,k,i))) {
                                 Console.Write("i");
                                 written = true;
