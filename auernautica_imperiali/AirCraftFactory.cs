@@ -19,7 +19,7 @@ namespace auernautica_imperiali {
                     unit = new AOrk(new Point(x, y, z), 3, 3, 2, 3, 7, 4, 4, 4, 22 );
                     unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
                     unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
-                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon());
                     break;
                 case EAirCraftType.VULTURE:
                     unit = new AOrk(new Point(x, y, z), 2, 3, 2, 3, 8, 5, 3, 4, 23); 
