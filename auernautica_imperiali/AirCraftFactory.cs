@@ -17,6 +17,9 @@ namespace auernautica_imperiali {
             {
                 case EAirCraftType.BIGBURNA:
                     unit = new AOrk(new Point(x, y, z), 3, 3, 2, 3, 7, 4, 4, 4, 22 );
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
                     break;
                 case EAirCraftType.VULTURE:
                     unit = new AOrk(new Point(x, y, z), 2, 3, 2, 3, 8, 5, 3, 4, 23); 
@@ -30,7 +33,7 @@ namespace auernautica_imperiali {
                 case EAirCraftType.HELLION:
                     unit = new AImperiali(new Point(x, y, z), 2, 2, 3, 2, 8, 7, 2, 5, 26); 
                     break;
-                case EAirCraftType.EXECUTINER:
+                case EAirCraftType.EXECUTIONER:
                     unit = new AImperiali(new Point(x, y, z), 3, 2, 2, 2, 7, 6, 3, 5, 23); 
                     break;
                 default:

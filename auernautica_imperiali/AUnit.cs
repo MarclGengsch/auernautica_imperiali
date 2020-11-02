@@ -12,6 +12,7 @@ namespace auernautica_imperiali {
         private int _maxAltitude;
         private int _team;
         private int _cost;
+        List<Weapon> weapons = new List<Weapon>();
 
         public int MaxAltitude
         {
@@ -49,5 +50,9 @@ namespace auernautica_imperiali {
         }
 
         public abstract bool JoinArmy();
+
+        public void AddWeapon(Weapon weapon) {
+            weapons.Add(weapon);
+        }
     }
 }

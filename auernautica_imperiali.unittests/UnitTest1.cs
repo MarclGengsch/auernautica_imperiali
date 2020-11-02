@@ -9,7 +9,6 @@ namespace auernautica_imperiali.unittests {
         [Test]
         public void Test1() {
             Assert.Pass();
-            Assert.Pass();
         }
     }
 }
