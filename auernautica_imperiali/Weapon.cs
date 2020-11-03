@@ -13,5 +13,34 @@ namespace auernautica_imperiali {
             _rangeTable[ERange.LONG] = fireRanges[2];
             _damage = damage;
         }
+
+        public bool IsAttackSuccessful() {
+            if (Dice.GetInstance().RollDice() >= _damage) {
+                return true;
+            }
+            
+            return false;
+        }
+
+        public int CountSuccessfulAttacks() {
+            int count = 0;
+
+            foreach (var rangeTableKey in _rangeTable.Keys) {
+                foreach (var rangeTableValue in _rangeTable.Values) {
+                    if (IsAttackSuccessful()) {
+                        count++;
+                    }
+                }
+            }
+            
+            return count;
+        }
+
+        public void Attack(AUnit aircraft) {
+            aircraft.Structure -= CountSuccessfulAttacks();
+            if (aircraft.Structure <= 0) {
+                aircraft.RemoveAircraft();
+            }
+        }
     }
 }

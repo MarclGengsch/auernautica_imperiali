@@ -40,9 +40,12 @@ namespace auernautica_imperiali {
                     break;
                 case EAirCraftType.HELLION:
                     unit = new AImperiali(new Point(x, y, z), 2, 2, 3, 2, 8, 7, 2, 5, 26); 
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.TWINMULITLASERS));
                     break;
                 case EAirCraftType.EXECUTIONER:
                     unit = new AImperiali(new Point(x, y, z), 3, 2, 2, 2, 7, 6, 3, 5, 23); 
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.QUADAUTOCANNON));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.TWINLASCANNON));
                     break;
                 default:
                     throw new ArgumentException();
@@ -57,4 +60,3 @@ namespace auernautica_imperiali {
         
     }
 }
-//GameEngine.OrkList.Add(new AOrk(new Point(x, y, z), 3, 3, 2, 3, 7, 4, 4, 4, 22 ));

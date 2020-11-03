@@ -9,8 +9,8 @@ namespace auernautica_imperiali {
             return _dice;
         }
 
-        public int RollDice(int max) {
-            return _random.Next(0, max + 1);
+        public int RollDice() {
+            return _random.Next(0, 6);
         }
 
         private Dice() {

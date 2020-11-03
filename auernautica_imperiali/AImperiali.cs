@@ -34,5 +34,6 @@ namespace auernautica_imperiali {
         {
             return MaxAltitude >= Point.Z;
         }
+
     }
 }

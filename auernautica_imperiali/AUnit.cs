@@ -122,5 +122,12 @@ namespace auernautica_imperiali {
             }
             return new MovementCost(maneuverCost,speedCost, fieldCost);
         }
+
+        public void RemoveAircraft() {
+            if (_team == 1)
+                GameEngine.OrkList.Remove((AOrk) this);
+            else
+                GameEngine.ImperialiList.Remove((AImperiali) this);
+        }
     }
 }
