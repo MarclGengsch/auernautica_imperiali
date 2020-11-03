@@ -17,18 +17,26 @@ namespace auernautica_imperiali {
             {
                 case EAirCraftType.BIGBURNA:
                     unit = new AOrk(new Point(x, y, z), 3, 3, 2, 3, 7, 4, 4, 4, 22 );
-                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
-                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(QUA));
-                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon());
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.QUADBIGSHOOTAS));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.TURRETBIGSHOOTAS));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.TAILGUN));
                     break;
                 case EAirCraftType.VULTURE:
                     unit = new AOrk(new Point(x, y, z), 2, 3, 2, 3, 8, 5, 3, 4, 23); 
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.QUADBIGSHOOTAS));
                     break;
                 case EAirCraftType.GROTBOMMER:
                     unit = new AOrk(new Point(x, y, z), 6, 2, 1, 2, 4, 3, 5, 4, 28); 
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.QUADBIGSHOOTAS));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.PORTTURRET));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.STARBOARDTURRET));
                     break;
                 case EAirCraftType.BLUEDEVIL:
                     unit = new AImperiali(new Point(x, y, z), 5, 2, 1, 2, 5, 3, 3, 5, 26); 
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.LASCANNON));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.DORSALTURRET));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.REARTURRET));
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.BOMBBAY));
                     break;
                 case EAirCraftType.HELLION:
                     unit = new AImperiali(new Point(x, y, z), 2, 2, 3, 2, 8, 7, 2, 5, 26); 
