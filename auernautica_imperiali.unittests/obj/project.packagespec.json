@@ -14,7 +14,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
+            "projectPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

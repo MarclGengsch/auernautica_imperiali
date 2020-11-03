@@ -1,3 +1,4 @@
+using System.Drawing;
 using NUnit.Framework;
 
 namespace auernautica_imperiali.unittests {
@@ -8,7 +9,8 @@ namespace auernautica_imperiali.unittests {
 
         [Test]
         public void Test1() {
-            Assert.Pass();
+            
+            Assert.IsTrue(new Point(1,2,3).Equals(new Point(1,2,3)));
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace auernautica_imperiali {
     public class AOrk : AUnit {
         public AOrk(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
@@ -9,7 +8,7 @@ namespace auernautica_imperiali {
 
         public override bool JoinArmy()
         {
-            if (!this.Point.IsPointLegal() || !IsStartField(Point) || !IsPurchaseLegal() || !IsAltitudeLegal())
+            if (!this.IsPointLegal() || !IsStartField() || !IsPurchaseLegal() || !IsAltitudeLegal())
             {
                 return false;
             }
@@ -18,9 +17,9 @@ namespace auernautica_imperiali {
             return true;
         }
         
-        private bool IsStartField(Point p)
+        private bool IsStartField()
         {
-            if (Point.Y == Map.Height - 3 || Point.Y ==  Map.Height - 2 || Point.Y == Map.Height - 1)
+            if (Y == Map.Height - 3 || Y ==  Map.Height - 2 || Y == Map.Height - 1)
                 return true;
 
             return false;
@@ -33,7 +32,8 @@ namespace auernautica_imperiali {
         
         private bool IsAltitudeLegal()
         {
-            return MaxAltitude >= Point.Z;
+            return MaxAltitude >= Z;
         }
+        
     }
 }
