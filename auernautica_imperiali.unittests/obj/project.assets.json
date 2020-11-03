@@ -4623,26 +4623,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tobias\\.nuget\\packages\\": {}
+    "C:\\Users\\magen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittests\\auernautica_imperiali.unittests.csproj",
+      "projectUniqueName": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittests\\auernautica_imperiali.unittests.csproj",
       "projectName": "auernautica_imperiali.unittests",
-      "projectPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittests\\auernautica_imperiali.unittests.csproj",
-      "packagesPath": "C:\\Users\\Tobias\\.nuget\\packages\\",
-      "outputPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittests\\obj\\",
+      "projectPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittests\\auernautica_imperiali.unittests.csproj",
+      "packagesPath": "C:\\Users\\magen\\.nuget\\packages\\",
+      "outputPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tobias\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\magen\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4687,7 +4685,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
