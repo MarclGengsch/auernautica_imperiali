@@ -49,7 +49,7 @@ namespace auernautica_imperiali {
 
         public bool IsPointLegal()
         {
-            if (Z >= Map.Altitude || X >= Map.Width || Y >= Map.Height || !IsPointFree()) //unsure
+            if (Z >= Map.Altitude || X >= Map.Width || Y >= Map.Height || !IsPointFree())
                 return false;
             return true;
         }
@@ -58,13 +58,13 @@ namespace auernautica_imperiali {
         {
             foreach (var _orks in GameEngine.OrkList)
             {
-                if (_orks.Point.Equals(this))
+                if (_orks.Equals(this))
                 {
                     return false;
                 }
             }
             foreach (var _imperiali in GameEngine.ImperialiList) {
-                if (_imperiali.Point.Equals(this))
+                if (_imperiali.Equals(this))
                 {
                     return false;
                 } 

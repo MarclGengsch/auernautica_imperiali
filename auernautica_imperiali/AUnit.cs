@@ -50,12 +50,6 @@ namespace auernautica_imperiali {
             set => _maneuver = value;
         }
 
-        private Point _point;
-
-        public Point Point {
-            get { return _point; }
-            set { _point = value; }
-        }
 
 
         protected AUnit(Point p, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
