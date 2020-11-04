@@ -16,7 +16,7 @@ namespace auernautica_imperiali {
                     for (int k = 1; k <= Width; k++) {
                         bool written = false;
                         foreach (AOrk _orks in GameEngine.OrkList) {
-                            if (new Point(k,i,j).Equals(_orks)) {        //funktioniert nicht mehr !!!!!!!
+                            if (_orks.Equals(new Point(k,i,j))) {        //funktioniert nicht mehr !!!!!!!
                                 sb.Append("o ");
                                 written = true;
                             }

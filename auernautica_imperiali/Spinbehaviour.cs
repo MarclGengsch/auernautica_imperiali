@@ -6,7 +6,7 @@
 
         public bool IsSpin(AUnit aircraft) {
             if (aircraft.Speed > aircraft.MaxSpeed || aircraft.Speed < aircraft.MinSpeed || aircraft.Z > aircraft.MaxAltitude) 
-                return true;
+                return HandlingTest(aircraft);    //??????
 
             return false;
         }
