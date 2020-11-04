@@ -50,7 +50,10 @@ namespace auernautica_imperiali {
             set => _maneuver = value;
         }
 
-
+        public IMoveBehaviour MoveBehaviour {
+            get => _moveBehaviour;
+            set => _moveBehaviour = value;
+        }
 
         protected AUnit(Point p, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
             int maneuver, int handling, int maxAltitude, int team, int cost) : base(p.X, p.Y, p.Z) {

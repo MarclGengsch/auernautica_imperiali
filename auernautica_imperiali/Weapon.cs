@@ -25,8 +25,8 @@ namespace auernautica_imperiali {
         public int CountSuccessfulAttacks() {
             int count = 0;
 
-            foreach (var rangeTableKey in _rangeTable.Keys) {
-                foreach (var rangeTableValue in _rangeTable.Values) {
+            foreach (ERange rangeTableKey in _rangeTable.Keys) {
+                foreach (int rangeTableValue in _rangeTable.Values) {
                     if (IsAttackSuccessful()) {
                         count++;
                     }

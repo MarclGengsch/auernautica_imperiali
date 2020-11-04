@@ -38,10 +38,7 @@ namespace auernautica_imperiali {
             if (obj.GetType() != this.GetType()) return false;
             return Equals((Point) obj);
         }
-
-        public override int GetHashCode() {
-            return HashCode.Combine(_x, _y, _z);
-        }
+        
 
         public override string ToString() {
             return $"{nameof(X)}: {X}, {nameof(Y)}: {Y}, {nameof(Z)}: {Z}";

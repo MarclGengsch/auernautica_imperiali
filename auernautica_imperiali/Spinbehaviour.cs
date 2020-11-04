@@ -12,9 +12,11 @@
         }
 
         public bool HandlingTest(AUnit aircraft) {
-            if (Dice.GetInstance().RollDice() >= aircraft.Handling) 
+            if (Dice.GetInstance().RollDice() >= aircraft.Handling) {
+                aircraft.MoveBehaviour = new DefaultMoveBehaviour();
                 return true;
-            
+            }
+
             --aircraft.Z;
 
             if (aircraft.Z <= 0) {
