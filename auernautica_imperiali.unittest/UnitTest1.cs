@@ -8,8 +8,11 @@ namespace auernautica_imperiali.unittest {
 
         [Test]
         public void Test1() {
-            Assert.Pass();
-            Assert.Pass();
+            Point p1 = new Point(1, 2, 3);
+            Point p2 = new Point(1, 2, 3);
+            Point p3 = new Point(1, 3, 3);
+            Assert.True(p1.Equals(p2));
+            Assert.False(p1.Equals(p3));
         }
     }
 }

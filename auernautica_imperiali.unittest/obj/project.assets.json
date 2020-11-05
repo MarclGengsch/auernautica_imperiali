@@ -1225,6 +1225,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "auernautica_imperiali/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/auernautica_imperiali.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/auernautica_imperiali.dll": {}
+        }
       }
     }
   },
@@ -4613,39 +4623,51 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "auernautica_imperiali/1.0.0": {
+      "type": "project",
+      "path": "../auernautica_imperiali/auernautica_imperiali.csproj",
+      "msbuildProject": "../auernautica_imperiali/auernautica_imperiali.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
-      "NUnit3TestAdapter >= 3.16.1"
+      "NUnit3TestAdapter >= 3.16.1",
+      "auernautica_imperiali >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\magen\\.nuget\\packages\\": {}
+    "C:\\Users\\Tobias\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
+      "projectUniqueName": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
       "projectName": "auernautica_imperiali.unittest",
-      "projectPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
-      "packagesPath": "C:\\Users\\magen\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittest\\obj\\",
+      "projectPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
+      "packagesPath": "C:\\Users\\Tobias\\.nuget\\packages\\",
+      "outputPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\magen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Tobias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
+              "projectPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4685,7 +4707,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
