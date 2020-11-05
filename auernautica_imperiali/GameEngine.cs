@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace auernautica_imperiali {
     public class GameEngine {
         private static List<AOrk> _orkList = new List<AOrk>();
         private static List<AImperiali> _imperialiList = new List<AImperiali>();
         public Map map = new Map(); //könnt müll sein
+        
         public static List<AOrk> OrkList {
             get => _orkList;
             set => _orkList = value;
@@ -24,6 +26,14 @@ namespace auernautica_imperiali {
         public static GameEngine GetInstance()
         {
             return _gameEngine;
+        }
+
+        public void ExecuteCommands(List<ICommand> commands) {
+            foreach (var command in commands) {
+                if (!command.Execute()) {
+                    throw new ArgumentException();
+                }
+            }
         }
     }
 }

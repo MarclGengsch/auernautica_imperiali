@@ -22,10 +22,10 @@ namespace auernautica_imperiali {
             return false;
         }
 
-        public int CountSuccessfulAttacks() {
+        public int CountSuccessfulAttacks(ERange range) {
             int count = 0;
 
-            foreach (ERange rangeTableKey in _rangeTable.Keys) {
+            foreach (ERange rangeTableKey in _rangeTable.Keys) {    //falsch CalculateDistance
                 foreach (int rangeTableValue in _rangeTable.Values) {
                     if (IsAttackSuccessful()) {
                         count++;
@@ -36,8 +36,8 @@ namespace auernautica_imperiali {
             return count;
         }
 
-        public void Attack(AUnit aircraft) {
-            aircraft.Structure -= CountSuccessfulAttacks();
+        public void Attack(AUnit aircraft, ERange range) {
+            aircraft.Structure -= CountSuccessfulAttacks(range);
             if (aircraft.Structure <= 0) {
                 aircraft.RemoveAircraft();
             }

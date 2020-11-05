@@ -89,5 +89,9 @@ namespace auernautica_imperiali {
     
             return route;
         }
+
+        public int CalculateDistance(Point end) {    //machen wir alleine fertig
+            return (int)Math.Sqrt(Math.Pow(X - end.X, 2) + Math.Pow(Y - end.Y, 2) + Math.Pow(Z - end.Z, 2));
+        }
     }
 }

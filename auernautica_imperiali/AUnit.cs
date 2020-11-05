@@ -14,7 +14,7 @@ namespace auernautica_imperiali {
         private readonly int _team;
         private readonly int _cost;
         private readonly List<Weapon> weapons = new List<Weapon>();
-        private IMoveBehaviour _moveBehaviour = new DefaultMoveBehaviour();
+        private IMoveBehaviour _moveBehaviour;
 
         public int MinSpeed => _minSpeed;
 
@@ -67,6 +67,7 @@ namespace auernautica_imperiali {
             _maxAltitude = maxAltitude;
             _team = team;
             _cost = cost;
+            _moveBehaviour = new DefaultMoveBehaviour(this);
         }
 
         public abstract bool JoinArmy();
@@ -125,6 +126,14 @@ namespace auernautica_imperiali {
                 GameEngine.OrkList.Remove((AOrk) this);
             else
                 GameEngine.ImperialiList.Remove((AImperiali) this);
+        }
+
+        public void Attack(AUnit target) { //fertig machen!!
+            
+        }
+
+        public ERange ConvertRange(int range) { //fertig machen!!!
+            CalculateDistance(range);
         }
     }
 }

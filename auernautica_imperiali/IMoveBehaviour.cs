@@ -1,5 +1,5 @@
 ﻿namespace auernautica_imperiali {
     public interface IMoveBehaviour {
-        public void Move(AUnit aircraft, Point destination);
+        public void Move(Point destination);
     }
 }

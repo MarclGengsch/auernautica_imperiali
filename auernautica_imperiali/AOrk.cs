@@ -35,5 +35,14 @@ namespace auernautica_imperiali {
             return MaxAltitude >= Z;
         }
         
+        protected bool Equals(Point other) {
+            return X == other.X && Y == other.Y && Z == other.Z;
+        }
+
+        public override bool Equals(object obj) {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return Equals((Point) obj);
+        }
     }
 }

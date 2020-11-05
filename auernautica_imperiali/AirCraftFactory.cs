@@ -18,11 +18,7 @@ namespace auernautica_imperiali {
             {
                 case EAirCraftType.BIGBURNA:
                     unit = new AOrk(new Point(x, y, z), 3, 3, 2, 3, 7, 4, 4, 4, 22 );
-                    List<EWeaponType> weaponTypes = new List<EWeaponType>() {EWeaponType.QUADBIGSHOOTAS, EWeaponType.TURRETBIGSHOOTAS, EWeaponType.TAILGUN};
-                    foreach (var etype in weaponTypes) {
-                        unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(etype));        //wie ist es besser????
-                    }
-                    
+                    unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.QUADBIGSHOOTAS));
                     unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.TURRETBIGSHOOTAS));
                     unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.TAILGUN));
                     break;
