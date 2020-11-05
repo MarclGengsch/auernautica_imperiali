@@ -18,21 +18,19 @@ namespace auernautica_imperiali {
             if (Dice.GetInstance().RollDice() >= _damage) {
                 return true;
             }
-            
+
             return false;
         }
 
         public int CountSuccessfulAttacks(ERange range) {
             int count = 0;
 
-            foreach (ERange rangeTableKey in _rangeTable.Keys) {    //falsch CalculateDistance
-                foreach (int rangeTableValue in _rangeTable.Values) {
-                    if (IsAttackSuccessful()) {
-                        count++;
-                    }
+            for (int i = 0; i < _rangeTable[range]; i++) {
+                if (IsAttackSuccessful()) {
+                    count++;
                 }
             }
-            
+
             return count;
         }
 

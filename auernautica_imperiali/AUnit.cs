@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 
 namespace auernautica_imperiali {
@@ -128,12 +129,23 @@ namespace auernautica_imperiali {
                 GameEngine.ImperialiList.Remove((AImperiali) this);
         }
 
-        public void Attack(AUnit target) { //fertig machen!!
-            
+        public void Attack(AUnit target) {
+            foreach (var weapon in Weapons) {
+                weapon.Attack(target, ConvertRange(target));
+            }
         }
 
-        public ERange ConvertRange(int range) { //fertig machen!!!
-            CalculateDistance(range);
+        public ERange ConvertRange(Point target) {
+            switch (CalculateDistance(target)) {
+                case 1 & 2 & 3 & 4:
+                    return ERange.SHORT;
+                case 5 & 6 & 7:
+                    return ERange.MEDIUM;
+                case 8 & 9 & 10:
+                    return ERange.LONG;
+                default:
+                    throw new ArgumentException();
+            }
         }
     }
 }
