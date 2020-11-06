@@ -80,7 +80,8 @@ namespace auernautica_imperiali {
             int diffY = Math.Abs(this._y - destination.Y);
             int diffZ = Math.Min(Math.Max(diffX, diffY), Math.Abs(this._z - destination.Z));
     
-            for (int i = 0, j = 0, k = 0, step = 0; i < Math.Max(diffX, diffY); step++) {
+            for (int i = 0, j = 0, k = 0, step = 0; i < Math.Max(diffX, diffY); step++)
+            {
                 route.Add(new Point(_x + (i * stepcountx), _y + (j * stepcounty), _z + (k * stepcountz)));
                 if (i < diffX) ++i;
                 if (j < diffY) ++j;

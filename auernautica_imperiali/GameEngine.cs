@@ -5,7 +5,7 @@ namespace auernautica_imperiali {
     public class GameEngine {
         private static List<AOrk> _orkList = new List<AOrk>();
         private static List<AImperiali> _imperialiList = new List<AImperiali>();
-        public Map map = new Map(); //könnt müll sein
+        public Map map = new Map();
         
         public static List<AOrk> OrkList {
             get => _orkList;

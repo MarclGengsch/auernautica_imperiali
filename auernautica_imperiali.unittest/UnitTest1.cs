@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading.Channels;
 using NUnit.Framework;
 
 namespace auernautica_imperiali.unittest {
@@ -9,7 +10,7 @@ namespace auernautica_imperiali.unittest {
         }
 
         [Test]
-        public void Point() {        
+        public void PointTest() {        
             Point p1 = new Point(1, 2, 3);
             Point p2 = new Point(1, 2, 3);
             Point p3 = new Point(2, 4, 3);
@@ -29,6 +30,23 @@ namespace auernautica_imperiali.unittest {
             Assert.AreEqual(0, p1.CalculateDistance(p1));
             
             Assert.Pass();
+        }
+
+        [Test]
+        public void PlayerTest()
+        {
+            Logger.LOG_TO_CONSOLE = true;
+            AirCraftFactory.GetInstance().MakeAircraft(14,14,1, EAirCraftType.VULTURE);
+            Assert.AreEqual(150-23, Player.getOrk().Coins);
+            AirCraftFactory.GetInstance().MakeAircraft(14,1,1, EAirCraftType.BLUEDEVIL);
+            Assert.AreEqual(150-26, Player.getImperiali().Coins);
+            //points sind zu zufällig um sie zu testen
+        }
+
+        [Test]
+        public void AUintTest()
+        {
+            
         }
     }
 }

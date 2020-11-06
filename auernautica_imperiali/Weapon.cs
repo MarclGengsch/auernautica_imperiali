@@ -37,7 +37,13 @@ namespace auernautica_imperiali {
 
         public void Attack(AUnit aircraft, ERange range) {
             aircraft.Structure -= CountSuccessfulAttacks(range);
-            if (aircraft.Structure <= 0) {
+            if (aircraft.Structure <= 0)
+            {
+                if (aircraft.Team == 1)
+                    Player.getOrk().Points += aircraft.Cost;
+                else
+                    Player.getImperiali().Points += aircraft.Cost;
+                
                 aircraft.RemoveAircraft();
             }
         }
