@@ -1,4 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0036a97f_002D684d_002D447f_002Db422_002D7b6c44a8a734/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Point" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::217E7D11-4B3C-47D7-B4B6-C557AAF5C7A0::.NETCoreApp,Version=v3.1::auernautica_imperiali.unittest.Tests.Point&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4402f800_002D5a0f_002D4261_002Db0fa_002D0a86f861ef81/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::83724195-D6EA-4ACE-82A3-ABF0A232D019::.NETCoreApp,Version=v3.1::auernautica_imperiali.unittests.Tests.Test1&lt;/TestId&gt;&#xD;

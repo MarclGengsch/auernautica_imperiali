@@ -3,7 +3,7 @@ using System.Text;
 using System.Threading;
 
 namespace auernautica_imperiali {
-    public class Map {
+    public class Map {        //kein Unittest, da dumm
         public const int Altitude = 5, Width = 15, Height = 15;
 
         public Map() {
