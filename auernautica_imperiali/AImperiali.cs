@@ -20,7 +20,7 @@ namespace auernautica_imperiali {
 
         private bool IsStartField()
         {
-            if (Y == 0 || Y == 1 || Y == 2)
+            if (Y == 1 || Y == 2 || Y == 3)
                 return true;
             return false;
         }

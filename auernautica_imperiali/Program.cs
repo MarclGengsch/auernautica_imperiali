@@ -9,6 +9,7 @@ namespace auernautica_imperiali {
             Logger.LOG_TO_CONSOLE = true;
             AirCraftFactory.GetInstance().MakeAircraft(3,14,1, EAirCraftType.BIGBURNA);
             AirCraftFactory.GetInstance().MakeAircraft(3,1,1, EAirCraftType.BIGBURNA);
+            AirCraftFactory.GetInstance().MakeAircraft(3,3,1, EAirCraftType.BLUEDEVIL);
             Console.WriteLine();
             //AirCraftFactory.GetInstance().MakeAircraft(4,14,2, EAirCraftType.BIGBURNA);
             //AirCraftFactory.GetInstance().MakeAircraft(5,14,3, EAirCraftType.BIGBURNA);

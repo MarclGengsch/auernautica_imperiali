@@ -19,7 +19,7 @@ namespace auernautica_imperiali {
         
         private bool IsStartField()
         {
-            if (Y == Map.Height - 3 || Y ==  Map.Height - 2 || Y == Map.Height - 1)
+            if (Y == Map.Height - 2 || Y ==  Map.Height - 1 || Y == Map.Height)
                 return true;
 
             return false;
