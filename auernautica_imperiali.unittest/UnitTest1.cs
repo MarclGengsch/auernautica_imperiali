@@ -46,7 +46,7 @@ namespace auernautica_imperiali.unittest {
         }
 
         [Test]
-        public void AUintTest()
+        public void AUnitTest()
         {
             AirCraftFactory.GetInstance().MakeAircraft(1, 13, 1, EAirCraftType.BIGBURNA);
             Point p = new Point(1, 1, 1);

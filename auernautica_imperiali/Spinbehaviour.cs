@@ -5,7 +5,7 @@
         public Spinbehaviour(AUnit aircraft) {
             _aircraft = aircraft;
         }
-        public void Move(Point destination) {
+        public void Move(Point destination, int throttle) {
             if (HandlingTest(_aircraft)) {
                 _aircraft.MoveBehaviour = new DefaultMoveBehaviour(_aircraft);
                 return;

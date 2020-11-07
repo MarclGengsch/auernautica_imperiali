@@ -20,7 +20,7 @@ namespace auernautica_imperiali {
             
             List<ICommand> commands = new List<ICommand>();
             Point destination = new Point(2,9,3);
-            ICommand move = new MoveCommand(GameEngine.OrkList[0], destination);
+            ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 1);
             commands.Add(move);
             GameEngine.GetInstance().ExecuteCommands(commands);
             //TestZweck
