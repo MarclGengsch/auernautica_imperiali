@@ -9,11 +9,15 @@ namespace auernautica_imperiali {
         public Map() {
         }
 
-        public void PrintMap() {
+        public void PrintMap()
+        {
+            int height = 1;
             StringBuilder sb = new StringBuilder();
-            for (int i = 1; i <= Height; i++) {
+            for (int i = 1; i <= Height; i++, height++) {
+                sb.Append(height.ToString() + "  ");
                 for (int j = 1; j <= Altitude; j++) {
-                    for (int k = 1; k <= Width; k++) {
+                    for (int k = 1; k <= Width; k++)
+                    {
                         bool written = false;
                         foreach (AOrk _orks in GameEngine.OrkList) {
                             if (_orks.Equals(new Point(k,i,j))) {

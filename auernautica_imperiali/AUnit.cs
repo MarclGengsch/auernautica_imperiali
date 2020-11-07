@@ -58,6 +58,7 @@ namespace auernautica_imperiali {
 
         protected AUnit(Point p, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
             int maneuver, int handling, int maxAltitude, int team, int cost) : base(p.X, p.Y, p.Z) {
+            _moveBehaviour = new DefaultMoveBehaviour(this);
             _structure = structure;
             _speed = speed;
             _throttle = throttle;
@@ -68,7 +69,6 @@ namespace auernautica_imperiali {
             _maxAltitude = maxAltitude;
             _team = team;
             _cost = cost;
-            _moveBehaviour = new DefaultMoveBehaviour(this);
         }
 
         public abstract bool JoinArmy();
