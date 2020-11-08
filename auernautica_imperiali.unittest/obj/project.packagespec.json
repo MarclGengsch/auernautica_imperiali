@@ -1,22 +1,23 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
+    "projectUniqueName": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
     "projectName": "auernautica_imperiali.unittest",
-    "projectPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
-    "outputPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali.unittest\\obj\\",
+    "projectPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittest\\auernautica_imperiali.unittest.csproj",
+    "outputPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali.unittest\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
-            "projectPath": "D:\\OneDrive - HTL Krems\\HTL Krems\\SEW\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj"
+          "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj": {
+            "projectPath": "D:\\SewProjekt\\auernautica_imperiali\\auernautica_imperiali\\auernautica_imperiali.csproj"
           }
         }
       }
@@ -58,7 +59,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
     }
   }
 }

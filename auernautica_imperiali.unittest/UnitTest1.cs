@@ -24,11 +24,7 @@ namespace auernautica_imperiali.unittest {
             Assert.True(p1.Equals(p2));
             Assert.False(p1.Equals(p3));
             Assert.AreEqual("X: 1, Y: 2, Z: 3", p1.ToString());
-
-            Assert.False(p1.IsPointFree());
-
-            Assert.True(p3.IsPointFree());
-
+            
             Assert.True(p4.IsPointLegal());
 
             Assert.AreEqual(15, p1.CalculateRoute(p4).Count);
@@ -38,6 +34,16 @@ namespace auernautica_imperiali.unittest {
             Assert.AreEqual(0, p1.CalculateDistance(p1));
 
             Assert.Pass();
+        }
+
+        [Test]
+        public void IsPointFreeTest()
+        {
+            Point p1 = new Point(1, 2, 3);
+            Point p2 = new Point(2, 4, 3);
+            AirCraftFactory.GetInstance().MakeAircraft(1, 2, 3, EAirCraftType.EXECUTIONER);
+            Assert.False(p1.IsPointFree());
+            Assert.True(p2.IsPointFree());
         }
 
         [Test]
@@ -64,7 +70,7 @@ namespace auernautica_imperiali.unittest {
         }
 
         [Test]
-        public void AUnitTest()
+        public void ConvertRange()
         {
             //ConvertRange
             Point p1 = new Point(2, 1, 1);
@@ -74,16 +80,22 @@ namespace auernautica_imperiali.unittest {
             Assert.AreEqual(ERange.SHORT, GameEngine.ImperialiList[0].ConvertRange(p1));
             Assert.AreEqual(ERange.MEDIUM, GameEngine.ImperialiList[0].ConvertRange(p2));
             Assert.AreEqual(ERange.LONG, GameEngine.ImperialiList[0].ConvertRange(p3));
+        }
 
-            //MoveCost
+        [Test]
+        public void MoveCostTest()
+        {
+            AirCraftFactory.GetInstance().MakeAircraft(1, 1, 1, EAirCraftType.BLUEDEVIL);
+            Point p = new Point(6, 1, 1);
+            
             Assert.AreEqual(5,
-                GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p2))
+                GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p))
                     .SpeedCost);
             Assert.AreEqual(0,
-                GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p2))
+                GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p))
                     .ManeuverCost);
             Assert.AreEqual(5,
-                GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p2))
+                GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p))
                     .FieldCount);
         }
 

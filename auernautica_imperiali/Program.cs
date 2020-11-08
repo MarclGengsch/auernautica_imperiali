@@ -38,8 +38,14 @@ namespace auernautica_imperiali {
             //TestZweck            
             GameEngine.GetInstance().map.PrintMap();
             */
-
-
+            
+            AirCraftFactory.GetInstance().MakeAircraft(1,13,1, EAirCraftType.BIGBURNA);
+            AirCraftFactory.GetInstance().MakeAircraft(1, 3, 1, EAirCraftType.BLUEDEVIL);
+            GameEngine.GetInstance().ExecuteCommands(new List<ICommand>(){new MoveCommand(GameEngine.ImperialiList[0], new Point(1,8,1 ), 1), new MoveCommand(GameEngine.OrkList[0], new Point(1,8,1 ), 2), new AttackCommand(GameEngine.OrkList[0], GameEngine.ImperialiList[0])});
+            GameEngine.GetInstance().map.PrintMap();
+            /*Console.WriteLine(GameEngine.ImperialiList[0].Structure);
+            GameEngine.OrkList[0].Attack(GameEngine.ImperialiList[0]);*/
+            Console.WriteLine(GameEngine.ImperialiList[0].Structure);
             /*Dictionary<string, string> dic = new Dictionary<string, string>();
             dic["hallo"] = "hallo";
             dic["hi"] = "hallo";
