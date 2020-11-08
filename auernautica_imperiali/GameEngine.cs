@@ -55,7 +55,7 @@ namespace auernautica_imperiali {
             {
                 Console.Clear();
                 Console.WriteLine("GameEngine: The Ork killed every Imperiali");
-                throw new NotImplementedException("Bruh, deal with it in another way");
+                throw new NotImplementedException("Bruh, deal with it");
             }
         }
     }
