@@ -4,7 +4,7 @@ namespace auernautica_imperiali {
     public class AImperiali : AUnit {        //unittests fertig da die methoden alle private sind und in der joinarmy verwendet werdne
         public AImperiali(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed, int maneuver,
             int handling, int maxAltitude, int cost) : base(xyz, structure, speed, throttle, minSpeed, maxSpeed, maneuver,
-            handling, maxAltitude, 2, cost) {
+            handling, maxAltitude, 2, cost, EOrientation.SOUTH) {
         }
 
         public override bool JoinArmy()

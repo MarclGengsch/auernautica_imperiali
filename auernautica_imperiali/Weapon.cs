@@ -1,33 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace auernautica_imperiali {
-    public class Weapon {        //das geht nd
+    public class Weapon {
+        //das geht nd
         private int _damage;
+        private int _special;
         private Dictionary<ERange, int> _rangeTable = new Dictionary<ERange, int>();
-        private List<EFireArc> _fireDirection = new List<EFireArc>();
-        
+        private List<EFireArc> _fireDirection;
+        private AUnit _currenShip;
 
-        public Weapon(List<EFireArc> fireDirections, List<int> fireRanges, int damage) {
+        public Weapon(List<EFireArc> fireDirections, List<int> fireRanges, int damage, int special, AUnit currentShip)
+        {
             _fireDirection = fireDirections;
             _rangeTable[ERange.SHORT] = fireRanges[0];
             _rangeTable[ERange.MEDIUM] = fireRanges[1];
             _rangeTable[ERange.LONG] = fireRanges[2];
             _damage = damage;
+            _special = special;
+            _currenShip = currentShip;
         }
 
-        public bool IsAttackSuccessful() {        //nein
-            if (Dice.GetInstance().RollDice() >= _damage) {
-                return true;
-            }
-
-            return false;
-        }
-
-        public int CountSuccessfulAttacks(ERange range) {        //nein
+        public int CountSuccessfulAttacks(ERange range, int damage)
+        {
+            //nein
             int count = 0;
+            for (int i = 0; i < _rangeTable[range]; i++)
+            {
+                int rolled = Dice.GetInstance().RollDice();
+                if (rolled >= damage)
+                {
+                    if (ExtraDamage(rolled))
+                        count++;
 
-            for (int i = 0; i < _rangeTable[range]; i++) {
-                if (IsAttackSuccessful()) {
                     count++;
                 }
             }
@@ -35,16 +40,32 @@ namespace auernautica_imperiali {
             return count;
         }
 
-        public void Attack(AUnit aircraft, ERange range) {    //nein
-            aircraft.Structure -= CountSuccessfulAttacks(range);
-            if (aircraft.Structure <= 0)
+        private bool ExtraDamage(int x)
+        {
+            if (x >= _special)
+                return true;
+
+            return false;
+        }
+
+        public void Attack(AUnit aircraft, ERange range)
+        {
+            //nein
+            if (_fireDirection.Contains(_currenShip.GetDirection(aircraft)))
             {
-                if (aircraft.Team == 1)
-                    Player.getOrk().Points += aircraft.Cost;
-                else
-                    Player.getImperiali().Points += aircraft.Cost;
-                
-                aircraft.RemoveAircraft();
+                if (_currenShip.Z == aircraft.Z + 1 || _currenShip.Z == aircraft.Z - 1)
+                    aircraft.Structure -= CountSuccessfulAttacks(range, _damage + 1);
+                else if(_currenShip.Z == aircraft.Z)
+                    aircraft.Structure -= CountSuccessfulAttacks(range, _damage);
+                if (aircraft.Structure <= 0)
+                {
+                    if (aircraft.Team == 1)
+                        Player.getOrk().Points += aircraft.Cost;
+                    else
+                        Player.getImperiali().Points += aircraft.Cost;
+
+                    aircraft.RemoveAircraft();
+                }
             }
         }
     }

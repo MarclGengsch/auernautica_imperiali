@@ -88,6 +88,18 @@ namespace auernautica_imperiali.unittest {
         }
 
         [Test]
+        public void UnitGetDirectionTest()
+        {
+            //GetDirection
+            AirCraftFactory.GetInstance().MakeAircraft(2, 2, 1, EAirCraftType.BLUEDEVIL);
+            AirCraftFactory.GetInstance().MakeAircraft(2, 14, 1, EAirCraftType.GROTBOMMER);
+            Assert.AreEqual(EFireArc.FRONT, GameEngine.OrkList[0].GetDirection(GameEngine.ImperialiList[0]));
+            Assert.AreEqual(EFireArc.FRONT, GameEngine.ImperialiList[0].GetDirection(GameEngine.OrkList[0]));
+        }
+        
+        
+        
+        [Test]
         public void AOrkTest()
         {
             //JoinArmy
@@ -122,12 +134,14 @@ namespace auernautica_imperiali.unittest {
         [Test]
         public void SpinTest()
         {
+            //Logger.LOG_TO_CONSOLE = true;
             AirCraftFactory.GetInstance().MakeAircraft(1, 1, 1, EAirCraftType.BLUEDEVIL);
             GameEngine.ImperialiList[0].Speed = 10;
             Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.ImperialiList[0]));
             GameEngine.ImperialiList[0].Speed = 1;
             Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.ImperialiList[0]));
-            AirCraftFactory.GetInstance().MakeAircraft(2, 15, 5, EAirCraftType.BIGBURNA);
+            AirCraftFactory.GetInstance().MakeAircraft(2, 14, 3, EAirCraftType.BIGBURNA);
+            GameEngine.OrkList[0].Z = 5;
             Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.OrkList[0]));
 
 

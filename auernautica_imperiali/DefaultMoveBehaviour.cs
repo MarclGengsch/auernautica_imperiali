@@ -20,6 +20,7 @@ namespace auernautica_imperiali {
             }
             _aircraft.Speed += throttle;
             int shipSpeed = _aircraft.Speed;
+            int maneuver = _aircraft.Maneuver;
             for (int i = 1; i <= costs.FieldCount && shipSpeed > 0; i++, shipSpeed--) 
             {
                 if (route[i].IsPointLegal())
