@@ -4,8 +4,7 @@ using System.Threading.Channels;
 
 namespace auernautica_imperiali {
     class Program {
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) {
             Logger.LOG_TO_CONSOLE = true;
             /*
             AirCraftFactory.GetInstance().MakeAircraft(1, 1, 1, EAirCraftType.BLUEDEVIL);
@@ -27,18 +26,18 @@ namespace auernautica_imperiali {
 
 
             //    MoveTest
-            
-            AirCraftFactory.GetInstance().MakeAircraft(3,14,1, EAirCraftType.BIGBURNA);
+
+            AirCraftFactory.GetInstance().MakeAircraft(3, 14, 1, EAirCraftType.BIGBURNA);
             GameEngine.GetInstance().map.PrintMap();
             List<ICommand> commands = new List<ICommand>();
-            Point destination = new Point(5,12,4);
+            Point destination = new Point(5, 12, 4);
             ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 0);
             commands.Add(move);
             GameEngine.GetInstance().ExecuteCommands(commands);
             //TestZweck            
             GameEngine.GetInstance().map.PrintMap();
-            
-            
+
+
             //    AttackTest
             /*
             AirCraftFactory.GetInstance().MakeAircraft(1,13,1, EAirCraftType.BIGBURNA);
@@ -49,8 +48,8 @@ namespace auernautica_imperiali {
             GameEngine.OrkList[0].Attack(GameEngine.ImperialiList[0]);
             Console.WriteLine(GameEngine.ImperialiList[0].Structure);
             */
-            
-            
+
+
             /*Dictionary<string, string> dic = new Dictionary<string, string>();
             dic["hallo"] = "hallo";
             dic["hi"] = "hallo";

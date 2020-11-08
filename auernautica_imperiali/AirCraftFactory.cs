@@ -2,23 +2,19 @@
 using System.Collections.Generic;
 
 namespace auernautica_imperiali {
-    public class AirCraftFactory {        //unsure aber ich glaub die tests passen
-        private AirCraftFactory()
-        {
+    public class AirCraftFactory {
+        private AirCraftFactory() {
         }
 
         private static AirCraftFactory instance = new AirCraftFactory();
 
-        public static AirCraftFactory GetInstance()
-        {
+        public static AirCraftFactory GetInstance() {
             return instance;
         }
 
-        public void MakeAircraft(int x, int y, int z, EAirCraftType type)
-        {
+        public void MakeAircraft(int x, int y, int z, EAirCraftType type) {
             AUnit unit;
-            switch (type)
-            {
+            switch (type) {
                 case EAirCraftType.BIGBURNA:
                     unit = new AOrk(new Point(x, y, z), 3, 3, 2, 3, 7, 4, 4, 4, 22);
                     unit.AddWeapon(WeaponFactory.GetInstance().MakeWeapon(EWeaponType.QUADBIGSHOOTAS, unit));
@@ -54,6 +50,7 @@ namespace auernautica_imperiali {
                 default:
                     throw new ArgumentException();
             }
+
             if (unit.JoinArmy())
                 Logger.GetInstance().Info("Success");
             else

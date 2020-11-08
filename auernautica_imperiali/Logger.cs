@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace auernautica_imperiali {
-    public class Logger {        //nicht nötig
+    public class Logger {
         private Logger() {
         }
 

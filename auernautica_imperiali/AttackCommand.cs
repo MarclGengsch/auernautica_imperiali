@@ -8,7 +8,7 @@
             _enemy = enemy;
         }
 
-        public bool Execute() { //fertig machen!!
+        public bool Execute() {
             _ship.Attack(_enemy);
             GameEngine.GetInstance().HasWon();
             return true;

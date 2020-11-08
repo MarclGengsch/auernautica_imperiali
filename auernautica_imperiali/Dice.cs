@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace auernautica_imperiali {
-    public class Dice {        //wie soll ich bitte eine random methode testen
+    public class Dice {
         Random _random = new Random();
         private static Dice _dice = new Dice();
 

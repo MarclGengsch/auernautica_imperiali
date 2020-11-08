@@ -1,40 +1,36 @@
-﻿
-namespace auernautica_imperiali {
-    public class AOrk : AUnit {        //unittests fertig da die methoden alle private sind und in der joinarmy verwendet werdne
+﻿namespace auernautica_imperiali {
+    public class AOrk : AUnit {
         public AOrk(Point xyz, int structure, int speed, int throttle, int minSpeed, int maxSpeed,
-            int maneuver, int handling, int maxAltitude, int cost) : base(xyz, structure, speed, throttle, minSpeed, maxSpeed,
+            int maneuver, int handling, int maxAltitude, int cost) : base(xyz, structure, speed, throttle, minSpeed,
+            maxSpeed,
             maneuver, handling, maxAltitude, 1, cost, EOrientation.NORTH) {
         }
 
-        public override bool JoinArmy()
-        {
-            if (!IsPointLegal() || !IsStartField() || !IsPurchaseLegal() || !IsAltitudeLegal())
-            {
+        public override bool JoinArmy() {
+            if (!IsPointLegal() || !IsStartField() || !IsPurchaseLegal() || !IsAltitudeLegal()) {
                 return false;
             }
+
             GameEngine.OrkList.Add(this);
             Player.getOrk().Coins -= Cost;
             return true;
         }
-        
-        private bool IsStartField()
-        {
-            if (Y == Map.Height - 2 || Y ==  Map.Height - 1 || Y == Map.Height)
+
+        private bool IsStartField() {
+            if (Y == Map.Height - 2 || Y == Map.Height - 1 || Y == Map.Height)
                 return true;
 
             return false;
         }
-        
-        private bool IsPurchaseLegal()
-        {
+
+        private bool IsPurchaseLegal() {
             return Cost <= Player.getOrk().Coins;
         }
-        
-        private bool IsAltitudeLegal()
-        {
+
+        private bool IsAltitudeLegal() {
             return MaxAltitude >= Z;
         }
-        
+
         protected bool Equals(Point other) {
             return X == other.X && Y == other.Y && Z == other.Z;
         }
