@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace auernautica_imperiali {
-    public class GameEngine {
+    public class GameEngine {        //well i dont know
         private static List<AOrk> _orkList = new List<AOrk>();
         private static List<AImperiali> _imperialiList = new List<AImperiali>();
         public Map map = new Map();

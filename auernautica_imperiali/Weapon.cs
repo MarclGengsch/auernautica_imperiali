@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace auernautica_imperiali {
-    public class Weapon {
+    public class Weapon {        //das geht nd
         private int _damage;
         private Dictionary<ERange, int> _rangeTable = new Dictionary<ERange, int>();
         private List<EFireArc> _fireDirection = new List<EFireArc>();
@@ -15,7 +15,7 @@ namespace auernautica_imperiali {
             _damage = damage;
         }
 
-        public bool IsAttackSuccessful() {
+        public bool IsAttackSuccessful() {        //nein
             if (Dice.GetInstance().RollDice() >= _damage) {
                 return true;
             }
@@ -23,7 +23,7 @@ namespace auernautica_imperiali {
             return false;
         }
 
-        public int CountSuccessfulAttacks(ERange range) {
+        public int CountSuccessfulAttacks(ERange range) {        //nein
             int count = 0;
 
             for (int i = 0; i < _rangeTable[range]; i++) {
@@ -35,7 +35,7 @@ namespace auernautica_imperiali {
             return count;
         }
 
-        public void Attack(AUnit aircraft, ERange range) {
+        public void Attack(AUnit aircraft, ERange range) {    //nein
             aircraft.Structure -= CountSuccessfulAttacks(range);
             if (aircraft.Structure <= 0)
             {

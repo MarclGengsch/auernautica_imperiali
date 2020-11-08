@@ -6,7 +6,9 @@
             _aircraft = aircraft;
         }
         public void Move(Point destination, int throttle) {
-            if (HandlingTest(_aircraft)) {
+            if (HandlingTest(_aircraft))
+            {
+                _aircraft.Speed = _aircraft.MinSpeed;
                 _aircraft.MoveBehaviour = new DefaultMoveBehaviour(_aircraft);
                 return;
             }
@@ -17,8 +19,7 @@
         }
 
         public static bool IsSpin(AUnit aircraft) {
-            if (aircraft.Speed > aircraft.MaxSpeed || aircraft.Speed < aircraft.MinSpeed ||
-                aircraft.Z > aircraft.MaxAltitude)
+            if (aircraft.Speed > aircraft.MaxSpeed || aircraft.Speed < aircraft.MinSpeed || aircraft.Z > aircraft.MaxAltitude)
                 return true;
 
             return false;

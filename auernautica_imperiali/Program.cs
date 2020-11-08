@@ -32,7 +32,7 @@ namespace auernautica_imperiali {
             GameEngine.GetInstance().map.PrintMap();
             List<ICommand> commands = new List<ICommand>();
             Point destination = new Point(15,14,4);
-            ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 0);
+            ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 2);
             commands.Add(move);
             GameEngine.GetInstance().ExecuteCommands(commands);
             //TestZweck            
@@ -49,6 +49,25 @@ namespace auernautica_imperiali {
             {
                 Console.WriteLine(VARIABLE);
             }*/
+            
+            //    SpinTest
+            AirCraftFactory.GetInstance().MakeAircraft(3,14,1, EAirCraftType.BIGBURNA);
+            List<ICommand> commands = new List<ICommand>();
+            Point destination = new Point(4,14,2);
+            Point destination1 = new Point(5,14,2);
+            Point destination2 = new Point(6,14,2);
+            Point destination3 = new Point(7,14,2);
+            ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 2);
+            ICommand move1 = new MoveCommand(GameEngine.OrkList[0], destination1, 2);
+            ICommand move2 = new MoveCommand(GameEngine.OrkList[0], destination2, 2);
+            ICommand move3 = new MoveCommand(GameEngine.OrkList[0], destination3, 2);
+            commands.Add(move);
+            commands.Add(move1);
+            commands.Add(move2);
+            commands.Add(move3);
+            GameEngine.GetInstance().ExecuteCommands(commands);
+            GameEngine.GetInstance().map.PrintMap();
+            Console.WriteLine(GameEngine.OrkList[0].Speed);    //wenn keiner mehr in der liste is is er abgestürzt
         }
     }
 }

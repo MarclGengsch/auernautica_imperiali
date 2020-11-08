@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace auernautica_imperiali {
-    public class DefaultMoveBehaviour : IMoveBehaviour {
+    public class DefaultMoveBehaviour : IMoveBehaviour {        //throttel fehlt beim testen aber sonst
         private AUnit _aircraft;
 
         public DefaultMoveBehaviour(AUnit aircraft)

@@ -92,14 +92,46 @@ namespace auernautica_imperiali.unittest {
         {
             //JoinArmy
             AOrk unit = new AOrk(new Point(1, 15, 1), 3, 3, 2, 3, 7, 4, 4, 4, 22);
+            AOrk unit1 = new AOrk(new Point(1, 1, 1), 3, 3, 2, 3, 7, 4, 4, 4, 22);
             Assert.IsTrue(unit.JoinArmy());
+            Assert.IsFalse(unit1.JoinArmy());
         }
+
         [Test]
         public void AImperialiTest()
         {
             //JoinArmy
             AImperiali unit = new AImperiali(new Point(1, 1, 1), 3, 3, 2, 3, 7, 4, 4, 4, 22);
+            AImperiali unit1 = new AImperiali(new Point(1, 15, 1), 3, 3, 2, 3, 7, 4, 4, 4, 22);
             Assert.IsTrue(unit.JoinArmy());
+            Assert.IsFalse(unit1.JoinArmy());
+        }
+
+        [Test]
+        public void AirCraftFactoryTest()
+        {
+            AirCraftFactory.GetInstance().MakeAircraft(1, 1, 1, EAirCraftType.BLUEDEVIL);
+            Assert.AreEqual("X: 1, Y: 1, Z: 1", GameEngine.ImperialiList[0].ToString());
+            Assert.AreEqual(1, GameEngine.ImperialiList.Count);
+
+            AirCraftFactory.GetInstance().MakeAircraft(1, 15, 1, EAirCraftType.VULTURE);
+            Assert.AreEqual("X: 1, Y: 15, Z: 1", GameEngine.OrkList[0].ToString());
+            Assert.AreEqual(1, GameEngine.OrkList.Count);
+        }
+
+        [Test]
+        public void SpinTest()
+        {
+            AirCraftFactory.GetInstance().MakeAircraft(1, 1, 1, EAirCraftType.BLUEDEVIL);
+            GameEngine.ImperialiList[0].Speed = 10;
+            Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.ImperialiList[0]));
+            GameEngine.ImperialiList[0].Speed = 1;
+            Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.ImperialiList[0]));
+            AirCraftFactory.GetInstance().MakeAircraft(2, 15, 5, EAirCraftType.BIGBURNA);
+            Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.OrkList[0]));
+
+
+
         }
     }
 }
