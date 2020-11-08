@@ -34,7 +34,6 @@ namespace auernautica_imperiali {
                                 written = true;
                             }
                         }
-
                         foreach (AImperiali _imperiali in GameEngine.ImperialiList)
                         {
                             if (_imperiali.Equals(new Point(k, i, j)))
@@ -43,7 +42,6 @@ namespace auernautica_imperiali {
                                 written = true;
                             }
                         }
-
                         if (!written)
                         {
                             sb.Append("_ ");
