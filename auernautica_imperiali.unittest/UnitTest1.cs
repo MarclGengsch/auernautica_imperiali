@@ -50,9 +50,10 @@ namespace auernautica_imperiali.unittest {
         {
             AirCraftFactory.GetInstance().MakeAircraft(1, 13, 1, EAirCraftType.BIGBURNA);
             Point p = new Point(1, 1, 1);
-            GameEngine.OrkList[0].SetLocation(p);
-            Assert.AreEqual("X: 1, Y: 1, Z: 1", GameEngine.OrkList[0].ToString());
-            
+            Point p1 = new Point(3, 3, 1);
+            //GameEngine.OrkList[0].SetLocation(p);
+            //Assert.AreEqual("X: 1, Y: 1, Z: 1", GameEngine.OrkList[0].ToString());
+            Console.WriteLine(GameEngine.OrkList[0].CalculateMoveCost(GameEngine.OrkList[0].CalculateRoute(p)).FieldCount);
             
             
         }

@@ -83,10 +83,10 @@ namespace auernautica_imperiali {
             this.Z = p.Z;
         }
 
-        public MovementCost CalculateMoveCost(List<Point> route) {
+        public MovementCost CalculateMoveCost(List<Point> route) { //changed int to 1
             int maneuverCost = 0;
-            int speedCost = 0;
-            int fieldCost = 0;
+            int speedCost = 1;
+            int fieldCost = 1;
             if (route.Count <= 1)    //wtf pani
                 return new MovementCost(1, 1, 1);
 
@@ -95,10 +95,13 @@ namespace auernautica_imperiali {
             int currIndex = 1;
             Point current = route[currIndex];
 
-            for (int i = 0; i < route.Count; i++) {
+            for (int i = 0; i <= route.Count; i++) {
                 if (previous.X != current.X) {
                     if (previous.Y != current.Y)
+                    {
                         maneuverCost++;
+                        speedCost++;
+                    }
 
                     speedCost++;
                 }
@@ -114,12 +117,11 @@ namespace auernautica_imperiali {
                 if (currIndex + 1 >= route.Count) {
                     break;
                 }
-
+                fieldCost++;
                 previous = route[++prevIndex];
                 current = route[++currIndex];
-                fieldCost++;
             }
-            return new MovementCost(maneuverCost,speedCost, fieldCost);
+            return new MovementCost(maneuverCost, speedCost, fieldCost);
         }
 
         public void RemoveAircraft() {
