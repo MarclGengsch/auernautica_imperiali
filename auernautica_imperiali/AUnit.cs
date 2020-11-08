@@ -146,6 +146,8 @@ namespace auernautica_imperiali {
             return new MovementCost(maneuverCost, speedCost, fieldCost);
         }
 
+        
+
         public void RemoveAircraft()
         {
             if (_team == 1)

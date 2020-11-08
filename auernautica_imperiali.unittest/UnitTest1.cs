@@ -152,6 +152,7 @@ namespace auernautica_imperiali.unittest {
             Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.ImperialiList[0]));
             GameEngine.ImperialiList[0].Speed = 1;
             Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.ImperialiList[0]));
+            GameEngine.ImperialiList[0].Speed = 3;
             AirCraftFactory.GetInstance().MakeAircraft(2, 14, 3, EAirCraftType.BIGBURNA);
             GameEngine.OrkList[0].Z = 5;
             Assert.IsTrue(Spinbehaviour.IsSpin(GameEngine.OrkList[0]));

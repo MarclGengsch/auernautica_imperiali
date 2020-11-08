@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace auernautica_imperiali {
+namespace auernautica_imperiali {        //how df am i supposed to test this?
     public class WeaponFactory {
         private static WeaponFactory _instance = new WeaponFactory();
 

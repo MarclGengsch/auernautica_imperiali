@@ -27,25 +27,30 @@ namespace auernautica_imperiali {
 
 
             //    MoveTest
-            /*
+            
             AirCraftFactory.GetInstance().MakeAircraft(3,14,1, EAirCraftType.BIGBURNA);
             GameEngine.GetInstance().map.PrintMap();
             List<ICommand> commands = new List<ICommand>();
-            Point destination = new Point(15,14,4);
+            Point destination = new Point(5,12,4);
             ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 0);
             commands.Add(move);
             GameEngine.GetInstance().ExecuteCommands(commands);
             //TestZweck            
             GameEngine.GetInstance().map.PrintMap();
-            */
             
+            
+            //    AttackTest
+            /*
             AirCraftFactory.GetInstance().MakeAircraft(1,13,1, EAirCraftType.BIGBURNA);
             AirCraftFactory.GetInstance().MakeAircraft(1, 3, 1, EAirCraftType.BLUEDEVIL);
             GameEngine.GetInstance().ExecuteCommands(new List<ICommand>(){new MoveCommand(GameEngine.ImperialiList[0], new Point(1,8,1 ), 1), new MoveCommand(GameEngine.OrkList[0], new Point(1,8,1 ), 2), new AttackCommand(GameEngine.OrkList[0], GameEngine.ImperialiList[0])});
             GameEngine.GetInstance().map.PrintMap();
-            /*Console.WriteLine(GameEngine.ImperialiList[0].Structure);
-            GameEngine.OrkList[0].Attack(GameEngine.ImperialiList[0]);*/
             Console.WriteLine(GameEngine.ImperialiList[0].Structure);
+            GameEngine.OrkList[0].Attack(GameEngine.ImperialiList[0]);
+            Console.WriteLine(GameEngine.ImperialiList[0].Structure);
+            */
+            
+            
             /*Dictionary<string, string> dic = new Dictionary<string, string>();
             dic["hallo"] = "hallo";
             dic["hi"] = "hallo";

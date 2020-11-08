@@ -10,6 +10,7 @@
 
         public bool Execute() { //fertig machen!!
             _ship.Attack(_enemy);
+            GameEngine.GetInstance().HasWon();
             return true;
         }
     }
