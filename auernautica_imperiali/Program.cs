@@ -7,17 +7,16 @@ namespace auernautica_imperiali {
         static void Main(string[] args)
         {
             Logger.LOG_TO_CONSOLE = true;
+            /*
             AirCraftFactory.GetInstance().MakeAircraft(1, 1, 1, EAirCraftType.BLUEDEVIL);
             GameEngine.GetInstance().map.PrintMap();
             Point p = new Point(4, 3, 1);
             Console.WriteLine(GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p)).ManeuverCost);
             Console.WriteLine(GameEngine.ImperialiList[0].CalculateMoveCost(GameEngine.ImperialiList[0].CalculateRoute(p)).SpeedCost);
+            */
 
-
-            Console.WriteLine();
-
-
-            /*    FactoryTest
+            //    FactoryTest
+            /*
             AirCraftFactory.GetInstance().MakeAircraft(4,14,2, EAirCraftType.BIGBURNA);             
             AirCraftFactory.GetInstance().MakeAircraft(5,14,3, EAirCraftType.BIGBURNA);
             AirCraftFactory.GetInstance().MakeAircraft(6,14,4, EAirCraftType.BIGBURNA);
@@ -27,11 +26,13 @@ namespace auernautica_imperiali {
             */
 
 
-            /*    MoveTest
+            //    MoveTest
+            /*
             AirCraftFactory.GetInstance().MakeAircraft(3,14,1, EAirCraftType.BIGBURNA);
+            GameEngine.GetInstance().map.PrintMap();
             List<ICommand> commands = new List<ICommand>();
-            Point destination = new Point(2,9,3);
-            ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 1);
+            Point destination = new Point(15,14,4);
+            ICommand move = new MoveCommand(GameEngine.OrkList[0], destination, 0);
             commands.Add(move);
             GameEngine.GetInstance().ExecuteCommands(commands);
             //TestZweck            

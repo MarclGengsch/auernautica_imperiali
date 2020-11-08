@@ -8,7 +8,7 @@ namespace auernautica_imperiali {
 
         public override bool JoinArmy()
         {
-            if (!this.IsPointLegal() || !IsStartField() || !IsPurchaseLegal() || !IsAltitudeLegal())
+            if (!IsPointLegal() || !IsStartField() || !IsPurchaseLegal() || !IsAltitudeLegal())
             {
                 return false;
             }

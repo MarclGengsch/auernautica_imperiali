@@ -46,7 +46,7 @@ namespace auernautica_imperiali {
 
         public bool IsPointLegal()
         {
-            if (Z >= Map.Altitude || X >= Map.Width || Y >= Map.Height || !IsPointFree())
+            if (Z > Map.Altitude || X > Map.Width || Y > Map.Height || !IsPointFree()) // >=
                 return false;
             return true;
         }
@@ -69,7 +69,7 @@ namespace auernautica_imperiali {
             return true;
         } 
         
-        public List<Point> CalculateRoute(Point destination) {
+        public List<Point> CalculateRoute(Point destination) { //könnt falsch sein
     
             List<Point> route = new List<Point>();
             Point p = new Point(_x, _y, _z);
@@ -81,7 +81,7 @@ namespace auernautica_imperiali {
             int diffY = Math.Abs(this._y - destination.Y);
             int diffZ = Math.Min(Math.Max(diffX, diffY), Math.Abs(this._z - destination.Z));
     
-            for (int i = 1, j = 1, k = 1, step = 0; step < Math.Max(diffX, diffY); step++)
+            for (int i = 0, j = 0, k = 0, step = 0; step <= Math.Max(diffX, diffY); step++)
             {
                 route.Add(new Point(_x + (i * stepcountx), _y + (j * stepcounty), _z + (k * stepcountz)));
                 if (i < diffX) ++i;

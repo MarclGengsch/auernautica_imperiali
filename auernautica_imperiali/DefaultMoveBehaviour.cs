@@ -15,12 +15,12 @@ namespace auernautica_imperiali {
         {
             List<Point> route = _aircraft.CalculateRoute(destination);
             MovementCost costs = _aircraft.CalculateMoveCost(route);
-            int shipSpeed = _aircraft.Speed;
             if (throttle > _aircraft.Throttle) {
                 throw new Exception();
             }
-            shipSpeed += throttle;
-            for (int i = 0; i < costs.FieldCount && shipSpeed > 0; i++, shipSpeed--)
+            _aircraft.Speed += throttle;
+            int shipSpeed = _aircraft.Speed;
+            for (int i = 1; i <= costs.FieldCount && shipSpeed > 0; i++, shipSpeed--) 
             {
                 if (route[i].IsPointLegal())
                     _aircraft.SetLocation(route[i]);

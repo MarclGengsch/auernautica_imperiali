@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 
 namespace auernautica_imperiali {
-    public abstract class AUnit : Point {
+    public abstract class AUnit : Point {        //unittest Fertig
         private int _structure;
         private int _speed;
         private int _throttle;
@@ -83,10 +83,10 @@ namespace auernautica_imperiali {
             this.Z = p.Z;
         }
 
-        public MovementCost CalculateMoveCost(List<Point> route) { //changed int to 1
+        public MovementCost CalculateMoveCost(List<Point> route) {
             int maneuverCost = 0;
-            int speedCost = 1;
-            int fieldCost = 1;
+            int speedCost = 0;
+            int fieldCost = 0;
             if (route.Count <= 1)    //wtf pani
                 return new MovementCost(1, 1, 1);
 
@@ -96,6 +96,7 @@ namespace auernautica_imperiali {
             Point current = route[currIndex];
 
             for (int i = 0; i <= route.Count; i++) {
+                fieldCost++;
                 if (previous.X != current.X) {
                     if (previous.Y != current.Y)
                     {
@@ -117,7 +118,6 @@ namespace auernautica_imperiali {
                 if (currIndex + 1 >= route.Count) {
                     break;
                 }
-                fieldCost++;
                 previous = route[++prevIndex];
                 current = route[++currIndex];
             }
@@ -139,14 +139,14 @@ namespace auernautica_imperiali {
 
         public ERange ConvertRange(Point target) {
             switch (CalculateDistance(target)) {
-                case 1 & 2 & 3 & 4:
+                case 1: case 2: case 3: case 4:
                     return ERange.SHORT;
-                case 5 & 6 & 7:
+                case 5: case 6: case 7:
                     return ERange.MEDIUM;
-                case 8 & 9 & 10:
+                case 8: case 9: case 10:
                     return ERange.LONG;
                 default:
-                    throw new ArgumentException();
+                    return ERange.OUT_OF_RANGE;
             }
         }
     }

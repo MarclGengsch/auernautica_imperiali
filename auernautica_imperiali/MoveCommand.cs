@@ -1,5 +1,5 @@
 ﻿namespace auernautica_imperiali {
-    public class MoveCommand : ICommand {
+    public class MoveCommand : ICommand {    //test fertig
         private AUnit _ship;
         private Point _target;
         private int _throttle;
